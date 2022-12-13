@@ -34,6 +34,7 @@ Vector *Vector2::Substract(float number) {
 Vector *Vector2::Multiply(float number) {
     this->y *= number;
     this->x *= number;
+    return this;
 }
 
 float Vector2::ScalarMultiply(Vector *vector) {

@@ -3,11 +3,12 @@
 
 #include "Vector.h"
 
+// Наследуем родительский класс Vector и переопределяем все его виртуальные методы
 class Vector2 : public Vector {
 public:
     Vector2(float x, float y);
 
-    Vector *Add(float number) override;
+    Vector *Add(float number) override; // Переопределенный метод суммы векторов, всё ниже по аналогии
 
     Vector *Add(Vector *vector) override;
 
@@ -29,8 +30,9 @@ public:
 
     void setY(float y);
 
+// Точки вектора (доступны только в дочернем классе)
 protected:
-    float x;
+    float x; 
 
     float y;
 };
